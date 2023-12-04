@@ -297,3 +297,34 @@ summary(META.100day.lm)
 META.100day.lm$coefficients[2]
 
 
+
+#-----------------------------------------------------------------
+
+#2 year analysis
+company <- c("AAPL", "AMZN", "GOOG", "META", "MSFT", "NVDA","TSLA")
+trend.2yr <- c(AAPL.2yr.lm$coefficients[2], AMZN.2yr.lm$coefficients[2],
+           GOOG.2yr.lm$coefficients[2], META.2yr.lm$coefficients[2],
+           MSFT.2yr.lm$coefficients[2], NVDA.2yr.lm$coefficients[2],
+           TSLA.2yr.lm$coefficients[2])
+
+#Creating table of trend values
+table <- data.frame(company,trend.2yr)
+
+orderedTrend <- table[order(table$trend, decreasing = TRUE),]
+orderedTrend
+
+#------------
+#100 day analysis
+trend.100day <- c(AAPL.100day.lm$coefficients[2], AMZN.100day.lm$coefficients[2],
+               GOOG.100day.lm$coefficients[2], META.100day.lm$coefficients[2],
+               MSFT.100day.lm$coefficients[2], NVDA.100day.lm$coefficients[2],
+               TSLA.100day.lm$coefficients[2])
+
+table100day <- data.frame(company, trend.100day)
+
+ordered.100day <-table100day[order(table100day$trend, decreasing = TRUE),]
+ordered.100day
+
+
+#trend data supports selection of NVDA, MSFT, and META
+
