@@ -1,19 +1,13 @@
 #BUAN352
 #Group G
+#Analysis of Magnificent 7 stocks
 
-
-#-----------
+#----------------------------------------------------------
 #MSFT
 library(forecast)
 options(scipien=999)
 MSFT <- read.csv("MSFT.csv")
 MSFT$date <- as.Date(MSFT$date, format="%m/%d/%Y")
-
-
-#252 trading days a year
-MSFT.5yr.ts <- ts(MSFT.5yr$close, frequency = 252) 
-plot(MSFT.5yr.ts, xaxt = "n", main = "MSFT Time Series")
-axis(1, at=1:6, labels=c(2019,2020,2021,2022,2023,2024))
 
 
 ###### 2 year subset
@@ -49,7 +43,7 @@ options(scipien=999)
 MSFT.100day.lm <- tslm(MSFT.100day.ts ~ trend)
 summary(MSFT.100day.lm)
 
-#------------------------------------
+#----------------------------------------------------------
 #AMZN
 library(forecast)
 AMZN <- read.csv("AMZN.csv")
@@ -90,7 +84,7 @@ AMZN.100day.lm <- tslm(AMZN.100day.ts ~ trend)
 summary(AMZN.100day.lm)
 
 
-#---------------------------
+#----------------------------------------------------------
 #NVDA
 library(forecast)
 NVDA <- read.csv("NVDA.csv")
@@ -131,7 +125,7 @@ NVDA.100day.lm <- tslm(NVDA.100day.ts ~ trend)
 summary(NVDA.100day.lm)
 
 
-#-------------------------
+#----------------------------------------------------------
 #AAPL
 library(forecast)
 AAPL <- read.csv("AAPL.csv")
@@ -173,7 +167,7 @@ summary(AAPL.100day.lm)
 
 
 
-#-------------------------
+#----------------------------------------------------------
 #GOOG (Alphabet)
 library(forecast)
 GOOG <- read.csv("GOOG.csv")
@@ -215,7 +209,7 @@ summary(GOOG.100day.lm)
 
 
 
-#-------------------------
+#----------------------------------------------------------
 #TSLA
 library(forecast)
 TSLA <- read.csv("TSLA.csv")
@@ -259,7 +253,7 @@ summary(TSLA.100day.lm)
 
 
 
-#-------------------------
+#----------------------------------------------------------
 #META
 library(forecast)
 META <- read.csv("META.csv")
@@ -298,9 +292,6 @@ summary(META.100day.lm)
 options(scipien=999)
 META.100day.lm <- tslm(META.100day.ts ~ trend)
 summary(META.100day.lm)
-
-
-
 
 
 
