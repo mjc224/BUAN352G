@@ -23,6 +23,7 @@ summary(MSFT.2yr.lm)
 
 options(scipien=999)
 MSFT.2yr.lm <- tslm(MSFT.2yr.ts ~ trend + season)
+text(1.8, max(MSFT.2yr.ts) - 2, sprintf("tslm trend: %.4f", MSFT.2yr.lm$coefficients[2]), col = "black")
 summary(MSFT.2yr.lm)
 
 
@@ -41,7 +42,7 @@ summary(MSFT.100day.lm)
 
 options(scipien=999)
 MSFT.100day.lm <- tslm(MSFT.100day.ts ~ trend)
-text(1.2, max(MSFT.100day.ts) - 2, sprintf("Trend Coefficient: %.4f", MSFT.100day.lm$coefficients[2]), col = "black")
+text(1.15, max(MSFT.100day.ts) - 0.5, sprintf("tslm trend: %.4f", MSFT.100day.lm$coefficients[2]), col = "black")
 summary(MSFT.100day.lm)
 
 #----------------------------------------------------------
@@ -64,6 +65,8 @@ summary(AMZN.2yr.lm)
 
 options(scipien=999)
 AMZN.2yr.lm <- tslm(AMZN.2yr.ts ~ trend + season)
+text(1.8, max(AMZN.2yr.ts) - 2, sprintf("tslm trend: %.4f", AMZN.2yr.lm$coefficients[2]), col = "black")
+
 summary(AMZN.2yr.lm)
 
 
@@ -82,6 +85,7 @@ summary(AMZN.100day.lm)
 
 options(scipien=999)
 AMZN.100day.lm <- tslm(AMZN.100day.ts ~ trend)
+text(1.15, max(AMZN.100day.ts) - 0.5, sprintf("tslm trend: %.4f", AMZN.100day.lm$coefficients[2]), col = "black")
 summary(AMZN.100day.lm)
 
 
@@ -105,6 +109,7 @@ summary(NVDA.2yr.lm)
 
 options(scipien=999)
 NVDA.2yr.lm <- tslm(NVDA.2yr.ts ~ trend + season)
+text(1.8, max(NVDA.2yr.ts) - 2, sprintf("tslm trend: %.4f", NVDA.2yr.lm$coefficients[2]), col = "black")
 summary(NVDA.2yr.lm)
 
 
@@ -123,6 +128,7 @@ summary(NVDA.100day.lm)
 
 options(scipien=999)
 NVDA.100day.lm <- tslm(NVDA.100day.ts ~ trend)
+text(1.15, max(NVDA.100day.ts) - 0.5, sprintf("tslm trend: %.4f", NVDA.100day.lm$coefficients[2]), col = "black")
 summary(NVDA.100day.lm)
 
 
@@ -146,6 +152,8 @@ summary(AAPL.2yr.lm)
 
 options(scipien=999)
 AAPL.2yr.lm <- tslm(AAPL.2yr.ts ~ trend + season)
+text(1.8, max(AAPL.2yr.ts) - 2, sprintf("tslm trend: %.4f", AAPL.2yr.lm$coefficients[2]), col = "black")
+
 summary(AAPL.2yr.lm)
 
 
@@ -164,6 +172,7 @@ summary(AAPL.100day.lm)
 
 options(scipien=999)
 AAPL.100day.lm <- tslm(AAPL.100day.ts ~ trend)
+text(1.15, max(AAPL.100day.ts) - 0.5, sprintf("tslm trend: %.4f", AAPL.100day.lm$coefficients[2]), col = "black")
 summary(AAPL.100day.lm)
 
 
@@ -188,6 +197,7 @@ summary(GOOG.2yr.lm)
 
 options(scipien=999)
 GOOG.2yr.lm <- tslm(GOOG.2yr.ts ~ trend + season)
+text(1.8, max(GOOG.2yr.ts) - 2, sprintf("tslm trend: %.4f", GOOG.2yr.lm$coefficients[2]), col = "black")
 summary(GOOG.2yr.lm)
 
 
@@ -206,6 +216,7 @@ summary(GOOG.100day.lm)
 
 options(scipien=999)
 GOOG.100day.lm <- tslm(GOOG.100day.ts ~ trend)
+text(1.15, max(GOOG.100day.ts) - 0.5, sprintf("tslm trend: %.4f", GOOG.100day.lm$coefficients[2]), col = "black")
 summary(GOOG.100day.lm)
 
 
@@ -230,6 +241,7 @@ summary(TSLA.2yr.lm)
 
 options(scipien=999)
 TSLA.2yr.lm <- tslm(TSLA.2yr.ts ~ trend + season)
+text(1.8, max(TSLA.2yr.ts) - 2, sprintf("tslm trend: %.4f", TSLA.2yr.lm$coefficients[2]), col = "black")
 summary(TSLA.2yr.lm)
 
 
@@ -248,6 +260,7 @@ summary(TSLA.100day.lm)
 
 options(scipien=999)
 TSLA.100day.lm <- tslm(TSLA.100day.ts ~ trend)
+text(1.15, max(TSLA.100day.ts) - 0.5, sprintf("tslm trend: %.4f", TSLA.100day.lm$coefficients[2]), col = "black")
 summary(TSLA.100day.lm)
 
 
@@ -274,6 +287,7 @@ summary(META.2yr.lm)
 
 options(scipien=999)
 META.2yr.lm <- tslm(META.2yr.ts ~ trend + season)
+text(1.8, max(META.2yr.ts) - 2, sprintf("tslm trend: %.4f", META.2yr.lm$coefficients[2]), col = "black")
 summary(META.2yr.lm)
 
 
@@ -291,10 +305,9 @@ summary(META.100day.lm)
 
 options(scipien=999)
 META.100day.lm <- tslm(META.100day.ts ~ trend)
+text(1.15, max(META.100day.ts) - 0.5, sprintf("tslm trend: %.4f", META.100day.lm$coefficients[2]), col = "black")
 summary(META.100day.lm)
 
-
-META.100day.lm$coefficients[2]
 
 
 
