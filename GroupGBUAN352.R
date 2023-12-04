@@ -41,6 +41,7 @@ summary(MSFT.100day.lm)
 
 options(scipien=999)
 MSFT.100day.lm <- tslm(MSFT.100day.ts ~ trend)
+text(1.2, max(MSFT.100day.ts) - 2, sprintf("Trend Coefficient: %.4f", MSFT.100day.lm$coefficients[2]), col = "black")
 summary(MSFT.100day.lm)
 
 #----------------------------------------------------------
@@ -283,7 +284,6 @@ META.100day.ts <- ts(META.100day$close, frequency = 252)
 #plot(META.100day.ts)
 plot(META.100day.ts, xaxt = "n", main = "META Time Series (100 day)", xlab = "Time", ylab = "Price")
 axis(1, at=c(1,1.2,1.4), labels=c("7/12/2023", "9/20/2023", "11/30/2023"))
-
 META.100day.lm <- lm(META.100day$close ~ time(META.100day.ts))
 
 abline(META.100day.lm, col = "green", lwd = 2)
