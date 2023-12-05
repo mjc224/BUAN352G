@@ -5,7 +5,7 @@
 #----------------------------------------------------------
 #MSFT
 library(forecast)
-options(scipien=999)
+options(scipen=999)
 MSFT <- read.csv("MSFT.csv")
 MSFT$date <- as.Date(MSFT$date, format="%m/%d/%Y")
 
@@ -21,7 +21,7 @@ MSFT.2yr.lm <- lm(MSFT.2yr$close ~ time(MSFT.2yr.ts))
 abline(MSFT.2yr.lm, col = "green", lwd = 2)
 summary(MSFT.2yr.lm)
 
-options(scipien=999)
+options(scipen=999)
 MSFT.2yr.lm <- tslm(MSFT.2yr.ts ~ trend + season)
 text(1.8, max(MSFT.2yr.ts) - 2, sprintf("tslm trend: %.4f", MSFT.2yr.lm$coefficients[2]), col = "black")
 summary(MSFT.2yr.lm)
@@ -40,7 +40,7 @@ MSFT.100day.lm <- lm(MSFT.100day$close ~ time(MSFT.100day.ts))
 abline(MSFT.100day.lm, col = "green", lwd = 2)
 summary(MSFT.100day.lm)
 
-options(scipien=999)
+options(scipen=999)
 MSFT.100day.lm <- tslm(MSFT.100day.ts ~ trend)
 text(1.15, max(MSFT.100day.ts) - 0.5, sprintf("tslm trend: %.4f", MSFT.100day.lm$coefficients[2]), col = "black")
 summary(MSFT.100day.lm)
@@ -63,7 +63,7 @@ AMZN.2yr.lm <- lm(AMZN.2yr$close ~ time(AMZN.2yr.ts))
 abline(AMZN.2yr.lm, col = "red", lwd = 2)
 summary(AMZN.2yr.lm)
 
-options(scipien=999)
+options(scipen=999)
 AMZN.2yr.lm <- tslm(AMZN.2yr.ts ~ trend + season)
 text(1.8, max(AMZN.2yr.ts) - 2, sprintf("tslm trend: %.4f", AMZN.2yr.lm$coefficients[2]), col = "black")
 
@@ -83,7 +83,7 @@ AMZN.100day.lm <- lm(AMZN.100day$close ~ time(AMZN.100day.ts))
 abline(AMZN.100day.lm, col = "green", lwd = 2)
 summary(AMZN.100day.lm)
 
-options(scipien=999)
+options(scipen=999)
 AMZN.100day.lm <- tslm(AMZN.100day.ts ~ trend)
 text(1.15, max(AMZN.100day.ts) - 0.5, sprintf("tslm trend: %.4f", AMZN.100day.lm$coefficients[2]), col = "black")
 summary(AMZN.100day.lm)
@@ -107,7 +107,7 @@ NVDA.2yr.lm <- lm(NVDA.2yr$close ~ time(NVDA.2yr.ts))
 abline(NVDA.2yr.lm, col = "green", lwd = 2)
 summary(NVDA.2yr.lm)
 
-options(scipien=999)
+options(scipen=999)
 NVDA.2yr.lm <- tslm(NVDA.2yr.ts ~ trend + season)
 text(1.8, max(NVDA.2yr.ts) - 2, sprintf("tslm trend: %.4f", NVDA.2yr.lm$coefficients[2]), col = "black")
 summary(NVDA.2yr.lm)
@@ -126,7 +126,7 @@ NVDA.100day.lm <- lm(NVDA.100day$close ~ time(NVDA.100day.ts))
 abline(NVDA.100day.lm, col = "green", lwd = 2)
 summary(NVDA.100day.lm)
 
-options(scipien=999)
+options(scipen=999)
 NVDA.100day.lm <- tslm(NVDA.100day.ts ~ trend)
 text(1.15, max(NVDA.100day.ts) - 0.5, sprintf("tslm trend: %.4f", NVDA.100day.lm$coefficients[2]), col = "black")
 summary(NVDA.100day.lm)
@@ -148,9 +148,7 @@ plot(AAPL.2yr.ts, xaxt = "n", main = "AAPL Time Series (2 Years)", xlab = "Time"
 axis(1, at=c(1,2,3), labels=c("11/30/21","11/30/22","11/30/23"))
 AAPL.2yr.lm <- lm(AAPL.2yr$close ~ time(AAPL.2yr.ts))
 abline(AAPL.2yr.lm, col = "green", lwd = 2)
-summary(AAPL.2yr.lm)
 
-options(scipien=999)
 AAPL.2yr.lm <- tslm(AAPL.2yr.ts ~ trend + season)
 text(1.8, max(AAPL.2yr.ts) - 2, sprintf("tslm trend: %.4f", AAPL.2yr.lm$coefficients[2]), col = "black")
 
@@ -170,7 +168,7 @@ AAPL.100day.lm <- lm(AAPL.100day$close ~ time(AAPL.100day.ts))
 abline(AAPL.100day.lm, col = "red", lwd = 2)
 summary(AAPL.100day.lm)
 
-options(scipien=999)
+options(scipen=999)
 AAPL.100day.lm <- tslm(AAPL.100day.ts ~ trend)
 text(1.15, max(AAPL.100day.ts) - 0.5, sprintf("tslm trend: %.4f", AAPL.100day.lm$coefficients[2]), col = "black")
 summary(AAPL.100day.lm)
@@ -195,7 +193,7 @@ GOOG.2yr.lm <- lm(GOOG.2yr$close ~ time(GOOG.2yr.ts))
 abline(GOOG.2yr.lm, col = "red", lwd = 2)
 summary(GOOG.2yr.lm)
 
-options(scipien=999)
+options(scipen=999)
 GOOG.2yr.lm <- tslm(GOOG.2yr.ts ~ trend + season)
 text(1.8, max(GOOG.2yr.ts) - 2, sprintf("tslm trend: %.4f", GOOG.2yr.lm$coefficients[2]), col = "black")
 summary(GOOG.2yr.lm)
@@ -214,7 +212,7 @@ GOOG.100day.lm <- lm(GOOG.100day$close ~ time(GOOG.100day.ts))
 abline(GOOG.100day.lm, col = "green", lwd = 2)
 summary(GOOG.100day.lm)
 
-options(scipien=999)
+options(scipen=999)
 GOOG.100day.lm <- tslm(GOOG.100day.ts ~ trend)
 text(1.15, max(GOOG.100day.ts) - 0.5, sprintf("tslm trend: %.4f", GOOG.100day.lm$coefficients[2]), col = "black")
 summary(GOOG.100day.lm)
@@ -239,7 +237,7 @@ TSLA.2yr.lm <- lm(TSLA.2yr$close ~ time(TSLA.2yr.ts))
 abline(TSLA.2yr.lm, col = "red", lwd = 2)
 summary(TSLA.2yr.lm)
 
-options(scipien=999)
+options(scipen=999)
 TSLA.2yr.lm <- tslm(TSLA.2yr.ts ~ trend + season)
 text(1.8, max(TSLA.2yr.ts) - 2, sprintf("tslm trend: %.4f", TSLA.2yr.lm$coefficients[2]), col = "black")
 summary(TSLA.2yr.lm)
@@ -258,7 +256,7 @@ TSLA.100day.lm <- lm(TSLA.100day$close ~ time(TSLA.100day.ts))
 abline(TSLA.100day.lm, col = "red", lwd = 2)
 summary(TSLA.100day.lm)
 
-options(scipien=999)
+options(scipen=999)
 TSLA.100day.lm <- tslm(TSLA.100day.ts ~ trend)
 text(1.15, max(TSLA.100day.ts) - 0.5, sprintf("tslm trend: %.4f", TSLA.100day.lm$coefficients[2]), col = "black")
 summary(TSLA.100day.lm)
@@ -285,7 +283,7 @@ META.2yr.lm <- lm(META.2yr$close ~ time(META.2yr.ts))
 abline(META.2yr.lm, col = "green", lwd = 2)
 summary(META.2yr.lm)
 
-options(scipien=999)
+options(scipen=999)
 META.2yr.lm <- tslm(META.2yr.ts ~ trend + season)
 text(1.8, max(META.2yr.ts) - 2, sprintf("tslm trend: %.4f", META.2yr.lm$coefficients[2]), col = "black")
 summary(META.2yr.lm)
@@ -303,7 +301,7 @@ META.100day.lm <- lm(META.100day$close ~ time(META.100day.ts))
 abline(META.100day.lm, col = "green", lwd = 2)
 summary(META.100day.lm)
 
-options(scipien=999)
+options(scipen=999)
 META.100day.lm <- tslm(META.100day.ts ~ trend)
 text(1.15, max(META.100day.ts) - 0.5, sprintf("tslm trend: %.4f", META.100day.lm$coefficients[2]), col = "black")
 summary(META.100day.lm)
@@ -316,9 +314,9 @@ summary(META.100day.lm)
 #2 year analysis
 company <- c("AAPL", "AMZN", "GOOG", "META", "MSFT", "NVDA","TSLA")
 trend.2yr <- c(AAPL.2yr.lm$coefficients[2], AMZN.2yr.lm$coefficients[2],
-           GOOG.2yr.lm$coefficients[2], META.2yr.lm$coefficients[2],
-           MSFT.2yr.lm$coefficients[2], NVDA.2yr.lm$coefficients[2],
-           TSLA.2yr.lm$coefficients[2])
+               GOOG.2yr.lm$coefficients[2], META.2yr.lm$coefficients[2],
+               MSFT.2yr.lm$coefficients[2], NVDA.2yr.lm$coefficients[2],
+               TSLA.2yr.lm$coefficients[2])
 
 #Creating table of trend values
 table <- data.frame(company,trend.2yr)
@@ -329,9 +327,9 @@ orderedTrend
 #------------
 #100 day analysis
 trend.100day <- c(AAPL.100day.lm$coefficients[2], AMZN.100day.lm$coefficients[2],
-               GOOG.100day.lm$coefficients[2], META.100day.lm$coefficients[2],
-               MSFT.100day.lm$coefficients[2], NVDA.100day.lm$coefficients[2],
-               TSLA.100day.lm$coefficients[2])
+                  GOOG.100day.lm$coefficients[2], META.100day.lm$coefficients[2],
+                  MSFT.100day.lm$coefficients[2], NVDA.100day.lm$coefficients[2],
+                  TSLA.100day.lm$coefficients[2])
 
 table100day <- data.frame(company, trend.100day)
 
